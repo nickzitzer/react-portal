@@ -1,0 +1,22 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="bin/www" type="NodeJSConfigurationType" path-to-node="docker://node:latest/node" path-to-js-file="server.js" working-dir="$PROJECT_DIR$">
+    <envs>
+      <env name="DEBUG" value="react-portal:*" />
+    </envs>
+    <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension" Node.JS.Docker.Generate.Image="true">
+      <option name="portBindings">
+        <list>
+          <DockerPortBindingImpl>
+            <option name="containerPort" value="3000" />
+            <option name="hostIp" value="127.0.0.1" />
+            <option name="hostPort" value="3001" />
+          </DockerPortBindingImpl>
+        </list>
+      </option>
+    </EXTENSION>
+    <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
+      <browser url="http://localhost:3000/" />
+    </EXTENSION>
+    <method v="2" />
+  </configuration>
+</component>
